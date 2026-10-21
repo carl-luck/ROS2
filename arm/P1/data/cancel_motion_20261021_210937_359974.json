@@ -1,0 +1,32 @@
+{
+  "experiment": "active_cancel",
+  "target_pan_rad": 0.3,
+  "trajectory_duration_sim_s": 9,
+  "cancel_delay_sim_s": 3,
+  "cancel_response_received": true,
+  "cancel_accepted": null,
+  "final_action_status": null,
+  "controller_error_code": null,
+  "stop_observation": null,
+  "experiment_passed": false,
+  "failure_reason": "The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()",
+  "start_positions_rad": [
+    0.15000000000000024,
+    -1.5699999571617145,
+    -6.487551173864063e-08,
+    -1.5699997883746186,
+    -1.1050953310948111e-07,
+    -1.8955396661363256e-07
+  ],
+  "target_positions_rad": [
+    0.3,
+    -1.5699999571617145,
+    -6.487551173864063e-08,
+    -1.5699997883746186,
+    -1.1050953310948111e-07,
+    -1.8955396661363256e-07
+  ],
+  "cancel_request_sim_time_s": 53156.412000000004,
+  "cancel_return_code": 0,
+  "finished_at": "2026-10-21T21:09:43.020863+08:00"
+}

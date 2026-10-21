@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "finished_at": "2026-10-20T11:20:16.693467-04:00",
+  "feedback_csv": "round_trip_T5s_20261020_111953_093511.csv",
+  "joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "segment_duration_sim_s": 5,
+  "first_point_time_sim_s": 1,
+  "planned_motion_duration_sim_s": 4,
+  "endpoint_check_threshold_rad": 0.01,
+  "experiment_passed": true,
+  "failure_reason": null,
+  "segments": [
+    {
+      "phase": "A_start",
+      "start_positions_rad": [
+        1.009551840487808e-07,
+        -1.56999995716172,
+        -6.487551786170516e-08,
+        -1.569999788374639,
+        -1.1050952297110247e-07,
+        -1.8955396661363827e-07
+      ],
+      "target_positions_rad": [
+        0.15,
+        -1.56999995716172,
+        -6.487551786170507e-08,
+        -1.569999788374639,
+        -1.1050952297110244e-07,
+        -1.8955396661363817e-07
+      ],
+      "accepted": true,
+      "action_status": 4,
+      "controller_error_code": 0,
+      "controller_error_string": "Goal successfully reached!",
+      "wall_send_to_result_s": 8.26224681099984,
+      "sim_send_to_result_s": 5.043000000000006,
+      "feedback_frames": 164,
+      "final_positions_rad": [
+        0.1499946183335186,
+        -1.5699999571617187,
+        -6.48755162235985e-08,
+        -1.569999788374633,
+        -1.105095254232362e-07,
+        -1.895539666110255e-07
+      ],
+      "max_endpoint_deviation_rad": 5.3816664813965964e-06,
+      "checks_passed": true
+    },
+    {
+      "phase": "B",
+      "start_positions_rad": [
+        0.14999515650016682,
+        -1.5699999571617187,
+        -6.487551614116806e-08,
+        -1.569999788374633,
+        -1.1050952557478967e-07,
+        -1.8955396661117674e-07
+      ],
+      "target_positions_rad": [
+        0.3,
+        -1.56999995716172,
+        -6.487551786170507e-08,
+        -1.569999788374639,
+        -1.1050952297110244e-07,
+        -1.8955396661363817e-07
+      ],
+      "accepted": true,
+      "action_status": 4,
+      "controller_error_code": 0,
+      "controller_error_string": "Goal successfully reached!",
+      "wall_send_to_result_s": 7.7536815200001,
+      "sim_send_to_result_s": 5.019999999999982,
+      "feedback_frames": 154,
+      "final_positions_rad": [
+        0.29999261749811,
+        -1.5699999571617191,
+        -6.487551647876977e-08,
+        -1.569999788374633,
+        -1.1050952495405965e-07,
+        -1.8955396661055555e-07
+      ],
+      "max_endpoint_deviation_rad": 7.382501889974247e-06,
+      "checks_passed": true
+    },
+    {
+      "phase": "A_return",
+      "start_positions_rad": [
+        0.2999933557482991,
+        -1.5699999571617191,
+        -6.487551639309672e-08,
+        -1.569999788374633,
+        -1.1050952511157773e-07,
+        -1.8955396661071297e-07
+      ],
+      "target_positions_rad": [
+        0.15,
+        -1.56999995716172,
+        -6.487551786170507e-08,
+        -1.569999788374639,
+        -1.1050952297110244e-07,
+        -1.8955396661363817e-07
+      ],
+      "accepted": true,
+      "action_status": 4,
+      "controller_error_code": 0,
+      "controller_error_string": "Goal successfully reached!",
+      "wall_send_to_result_s": 7.560738382999716,
+      "sim_send_to_result_s": 5.024000000000001,
+      "feedback_frames": 150,
+      "final_positions_rad": [
+        0.15000538143172232,
+        -1.5699999571617178,
+        -6.487551337675632e-08,
+        -1.5699997883746288,
+        -1.1050953065730885e-07,
+        -1.8955396661625023e-07
+      ],
+      "max_endpoint_deviation_rad": 5.381431722323304e-06,
+      "checks_passed": true
+    }
+  ]
+}

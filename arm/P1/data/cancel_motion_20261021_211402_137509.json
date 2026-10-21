@@ -1,0 +1,32 @@
+{
+  "experiment": "active_cancel",
+  "target_pan_rad": 0.3,
+  "trajectory_duration_sim_s": 9,
+  "cancel_delay_sim_s": 3,
+  "cancel_response_received": true,
+  "cancel_accepted": true,
+  "final_action_status": 5,
+  "controller_error_code": 0,
+  "stop_observation": null,
+  "experiment_passed": false,
+  "failure_reason": "停止观察窗口不足 1 秒仿真时间。",
+  "start_positions_rad": [
+    0.1730183222343751,
+    -1.5699999571617143,
+    -6.487550532803457e-08,
+    -1.569999788374604,
+    -1.1050954377642689e-07,
+    -1.8955396661416142e-07
+  ],
+  "target_positions_rad": [
+    0.3,
+    -1.5699999571617143,
+    -6.487550532803457e-08,
+    -1.569999788374604,
+    -1.1050954377642689e-07,
+    -1.8955396661416142e-07
+  ],
+  "cancel_request_sim_time_s": 53324.49600000001,
+  "cancel_return_code": 0,
+  "finished_at": "2026-10-21T21:14:09.236884+08:00"
+}

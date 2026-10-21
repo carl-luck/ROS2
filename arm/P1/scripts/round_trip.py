@@ -1,5 +1,6 @@
 import argparse
 import csv
+import json
 import math
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -27,8 +28,11 @@ class RoundTrip(Node):
     def __init__(self, end_time):
         super().__init__(
             'arm_round_trip',
-            parameter_overrides=[Parameter('use_sim_time', value=True)],
+            parameter_overrides=[
+                Parameter('use_sim_time', value=True),
+            ],
         )
+
         self.end_time = end_time
 
         self.joints = [
@@ -43,6 +47,7 @@ class RoundTrip(Node):
         self.positions = None
         self.state_stamp = None
         self.description = None
+
         self.goal_handle = None
         self.result_future = None
         self.send_future = None
@@ -54,6 +59,7 @@ class RoundTrip(Node):
 
         self.file = None
         self.writer = None
+        self.records = []
 
         self.state_sub = self.create_subscription(
             JointState,
@@ -84,7 +90,10 @@ class RoundTrip(Node):
         values = dict(zip(message.name, message.position))
 
         if all(name in values for name in self.joints):
-            positions = [values[name] for name in self.joints]
+            positions = [
+                values[name]
+                for name in self.joints
+            ]
 
             if all(math.isfinite(value) for value in positions):
                 self.positions = positions
@@ -200,7 +209,8 @@ class RoundTrip(Node):
             i = indexes[name]
 
             desired, actual, error = [
-                values[i] for values in arrays
+                values[i]
+                for values in arrays
             ]
 
             self.writer.writerow([
@@ -286,6 +296,7 @@ class RoundTrip(Node):
         self.last_print = -math.inf
         self.goal_handle = None
         self.result_future = None
+        self.send_future = None
 
         goal = FollowJointTrajectory.Goal()
         goal.trajectory.joint_names = self.joints
@@ -306,7 +317,26 @@ class RoundTrip(Node):
             f'{start[0]:.4f} → {target[0]:.4f} rad'
         )
 
+        record = {
+            'phase': phase,
+            'start_positions_rad': start.copy(),
+            'target_positions_rad': target.copy(),
+            'accepted': None,
+            'action_status': None,
+            'controller_error_code': None,
+            'controller_error_string': None,
+            'wall_send_to_result_s': None,
+            'sim_send_to_result_s': None,
+            'feedback_frames': None,
+            'final_positions_rad': None,
+            'max_endpoint_deviation_rad': None,
+            'checks_passed': False,
+        }
+
+        self.records.append(record)
+
         wall_start = monotonic()
+        sim_send = self.get_clock().now().nanoseconds * 1e-9
 
         self.send_future = self.client.send_goal_async(
             goal,
@@ -319,6 +349,7 @@ class RoundTrip(Node):
             )
 
         self.goal_handle = self.send_future.result()
+        record['accepted'] = self.goal_handle.accepted
 
         if not self.goal_handle.accepted:
             raise RuntimeError(f'{phase} 目标被拒绝。')
@@ -332,6 +363,8 @@ class RoundTrip(Node):
             self.result_future.done,
             wait_timeout,
         ):
+            record['feedback_frames'] = self.samples
+
             sim_elapsed = (
                 self.get_clock().now().nanoseconds * 1e-9
                 - sim_start
@@ -346,10 +379,23 @@ class RoundTrip(Node):
 
         response = self.result_future.result()
 
+        record.update({
+            'action_status': response.status,
+            'controller_error_code': response.result.error_code,
+            'controller_error_string': response.result.error_string,
+            'wall_send_to_result_s': monotonic() - wall_start,
+            'sim_send_to_result_s': (
+                self.get_clock().now().nanoseconds * 1e-9
+                - sim_send
+            ),
+            'feedback_frames': self.samples,
+        })
+
         print(
             f'[{phase}] status={response.status}, '
             f'code={response.result.error_code}, '
-            f'墙钟耗时={monotonic() - wall_start:.2f}s, '
+            f'墙钟耗时={record["wall_send_to_result_s"]:.2f}s, '
+            f'仿真观测耗时={record["sim_send_to_result_s"]:.3f}s, '
             f'反馈帧数={self.samples}'
         )
 
@@ -373,6 +419,9 @@ class RoundTrip(Node):
             for a, b in zip(actual, target)
         )
 
+        record['final_positions_rad'] = actual.copy()
+        record['max_endpoint_deviation_rad'] = deviation
+
         print(
             f'[{phase}] 结束后底座={actual[0]:.6f} rad，'
             f'六关节最大终点偏差={deviation:.6f} rad'
@@ -382,6 +431,8 @@ class RoundTrip(Node):
             raise RuntimeError(
                 '终点偏差超过本实验检查阈值 0.01 rad，停止后续运动。'
             )
+
+        record['checks_passed'] = True
 
 
 def main():
@@ -404,7 +455,10 @@ def main():
     )
 
     node = RoundTrip(args.duration)
+
     passed = False
+    path = None
+    failure_reason = None
 
     print(
         f'本次每段总时间：{args.duration} s，'
@@ -482,20 +536,61 @@ def main():
         )
 
     except KeyboardInterrupt:
+        failure_reason = '客户端收到 Ctrl+C'
         print('\n客户端收到 Ctrl+C，尝试取消未完成目标。')
 
     except Exception as error:
+        failure_reason = str(error)
         print(f'\n实验未通过：{error}')
 
     finally:
         try:
             node.cancel_pending()
         finally:
-            if node.file is not None:
-                node.file.close()
+            try:
+                if node.file is not None:
+                    node.file.close()
 
-            node.destroy_node()
-            rclpy.shutdown()
+                if path is not None:
+                    report = {
+                        'schema_version': 1,
+                        'finished_at': (
+                            datetime.now().astimezone().isoformat()
+                        ),
+                        'feedback_csv': path.name,
+                        'joint_names': node.joints,
+                        'segment_duration_sim_s': args.duration,
+                        'first_point_time_sim_s': 1,
+                        'planned_motion_duration_sim_s': (
+                            args.duration - 1
+                        ),
+                        'endpoint_check_threshold_rad': 0.01,
+                        'experiment_passed': passed,
+                        'failure_reason': failure_reason,
+                        'segments': node.records,
+                    }
+
+                    report_path = path.with_name(
+                        path.stem + '_run.json'
+                    )
+
+                    with report_path.open(
+                        'x',
+                        encoding='utf-8',
+                    ) as file:
+                        json.dump(
+                            report,
+                            file,
+                            ensure_ascii=False,
+                            indent=2,
+                            allow_nan=False,
+                        )
+
+                    print(f'执行结果记录：{report_path}')
+
+            finally:
+                node.destroy_node()
+                rclpy.shutdown()
 
     return 0 if passed else 1
 
