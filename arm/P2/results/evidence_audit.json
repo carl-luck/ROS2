@@ -1,0 +1,237 @@
+{
+  "archive_sha256": "dc66f47597f42b2b12e33d4cd3997030d9d2c3a03627fcaecb8457528f03e8df",
+  "cases": [
+    {
+      "profile": "small",
+      "case": "1_baseline",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012886797351794831,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.009806738991755992,
+        "hold": 0.017791530990507454,
+        "stopping": 0.010981587984133512
+      },
+      "minimum_self_clearance_m": 0.017124178373060375,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 0.5460207816213352
+    },
+    {
+      "profile": "small",
+      "case": "1_mpc",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012646089997829743,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.007764392998069525,
+        "hold": 0.026659965980798006,
+        "stopping": 0.011269078007899225
+      },
+      "minimum_self_clearance_m": 0.017124210139488533,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 5.786440975498407
+    },
+    {
+      "profile": "small",
+      "case": "2_mpc",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012647327348738977,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.013424400996882468,
+        "hold": 0.020702524983789772,
+        "stopping": 0.012679104984272271
+      },
+      "minimum_self_clearance_m": 0.01712420821194685,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 5.288752599153665
+    },
+    {
+      "profile": "small",
+      "case": "2_baseline",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012891818839976175,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.007870701025240123,
+        "hold": 0.02015165099874139,
+        "stopping": 0.009259224985726178
+      },
+      "minimum_self_clearance_m": 0.017124177157881917,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 0.3308005718281488
+    },
+    {
+      "profile": "small",
+      "case": "3_baseline",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012918217651922588,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.009313588961958885,
+        "hold": 0.01651284995023161,
+        "stopping": 0.00900861102854833
+      },
+      "minimum_self_clearance_m": 0.01712417420415509,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 0.6043804838554923
+    },
+    {
+      "profile": "small",
+      "case": "3_mpc",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012646224522850788,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.33143991499673575,
+        "hold": 0.022021999000571668,
+        "stopping": 0.008935351972468197
+      },
+      "minimum_self_clearance_m": 0.017124198866003373,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 5.841929008602165
+    },
+    {
+      "profile": "small",
+      "case": "solver_failure",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012649373836079886,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.01360952400136739,
+        "hold": 0.01952360599534586,
+        "stopping": 0.01157197100110352
+      },
+      "minimum_self_clearance_m": 0.01712420115447812,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "injected_row": {
+        "elapsed_sim_s": "2.012000000000171",
+        "solve_wall_s": "0.00097567995544523",
+        "status": "injected_solver_exception",
+        "fallback": "True",
+        "injection": "failure",
+        "iterations": "0",
+        "limiter_correction_max_rad_s": "0.0"
+      },
+      "fallback_count": 1,
+      "solve_p95_wall_ms": 5.433290405198926
+    },
+    {
+      "profile": "small",
+      "case": "solver_timeout",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.012650933837318152,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.009463127003982663,
+        "hold": 0.02211924799485132,
+        "stopping": 0.01431747799506411
+      },
+      "minimum_self_clearance_m": 0.0171242001624054,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "injected_row": {
+        "elapsed_sim_s": "2.0020000000004075",
+        "solve_wall_s": "0.029132728988770396",
+        "status": "solved; wall_time_limit_exceeded",
+        "fallback": "True",
+        "injection": "timeout",
+        "iterations": "25",
+        "limiter_correction_max_rad_s": "0.0"
+      },
+      "fallback_count": 1,
+      "solve_p95_wall_ms": 5.247521493583917
+    },
+    {
+      "profile": "small",
+      "case": "request_crash",
+      "stop_verified": true,
+      "guard_reason": "request_source_sim_stamp_stale",
+      "maximum_sampled_actual_speed_rad_s": 0.012634658565240257,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.00676397600909695,
+        "hold": 0.01988833403447643,
+        "stopping": 0.008722753962501884
+      },
+      "minimum_self_clearance_m": 0.017124207311343436,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "request_to_zero_wall_s": 0.24615943903336301,
+      "tracking_note": "SIGKILL bypasses finally; raw metadata remains running; batch case is authoritative for this injected exit"
+    },
+    {
+      "profile": "demo",
+      "case": "demo_mpc",
+      "stop_verified": true,
+      "guard_reason": "motion_complete_received",
+      "maximum_sampled_actual_speed_rad_s": 0.013092021974736287,
+      "feedback_max_gap_wall_s_by_phase": {
+        "waiting": 0.008245255041401833,
+        "hold": 0.016776922973804176,
+        "stopping": 0.02010446198983118
+      },
+      "minimum_self_clearance_m": 0.0171356547973971,
+      "minimum_floor_clearance_m": 0.09859871715307236,
+      "fallback_count": 0,
+      "solve_p95_wall_ms": 5.893009365536272
+    }
+  ],
+  "source_checks": [
+    {
+      "profile": "small",
+      "case": "1_baseline",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "1_mpc",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "2_mpc",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "2_baseline",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "3_baseline",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "3_mpc",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "solver_failure",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "solver_timeout",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "small",
+      "case": "request_crash",
+      "matching_core_and_control": true
+    },
+    {
+      "profile": "demo",
+      "case": "demo_mpc",
+      "matching_core_and_control": true
+    }
+  ],
+  "source_version_note": "historical runs used dirty working tree; matching snapshots preserve exact recorded core/control/runner hashes; later Git commit is packaging, not the original execution commit",
+  "metric_scope": "per-run sampled valid-window trapezoidal integrals; then n=3 mean and sample SD; no common-window resampling or significance claim"
+}

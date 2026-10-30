@@ -1,0 +1,13 @@
+{
+  "files_sha256": {
+    "joint_interface_test.py": "0936b7b7e205dc46b1757c700253306c8eade9f6ae22ef06d1515c97f17616b6",
+    "p2_six_control.py": "d9f27f868563d2785996ac504ffe3ddbdf51cabc533efb9dc48469674cd96383",
+    "package.xml": "fe60485ff87656fd48e895dbc12f25f1c47877df29c90141f9cd228154e2606a",
+    "zero_hold.py": "f8d201d3da3ecd608c92a5172895fbb87201e5101a8225ab0f6e37b5a0ea6a10",
+    "p2_six_core.py": "0f40e2f8ddb1f96fa134b5902aaeb7aa2617348b593801cfe7f4369ae796b06e",
+    "run_p2_six_module.py": "ac27343ba95c1dbcee39a09e3d1c716d1cc05ee311cc551fadea8ca736fc6e6d",
+    "config/p2_controllers.yaml": "e6ed2f5789b7e715058bc64584d117711696a116bca2200642e2ad8a6ee3ced6",
+    "launch/p2_sim.launch.py": "db0df0512845dcce1a7b3049cc73387931f0c4d7c2ec4627c3987fa4a3934b9f"
+  },
+  "scope": "Core, control and runner verified against historical logs; supporting sources captured at packaging and are not independently hashed by six-joint run records"
+}

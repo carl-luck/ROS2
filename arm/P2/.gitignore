@@ -1,0 +1,11 @@
+/data/
+/figures/*
+!/figures/portfolio/
+/figures/portfolio/*
+!/figures/portfolio/six_baseline.png
+!/figures/portfolio/six_mpc.png
+!/figures/portfolio/six_demo.png
+/p2_six_simulation.log
+/p2_six_simulation.pid
+
+/docs/backup_*/
