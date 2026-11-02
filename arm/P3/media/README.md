@@ -11,6 +11,6 @@
 ## 公开视频
 
 - [Release 页面](https://github.com/carl-luck/ROS2/releases/tag/p3-demo-v1)
-- [下载原始录屏](https://github.com/carl-luck/ROS2/releases/download/untagged-43a3b8157cfd3c95567b/20261101_ur5e_detour_demo_original.mp4)
+- [下载原始录屏](https://github.com/carl-luck/ROS2/releases/download/p3-demo-v1/20261101_ur5e_detour_demo_original.mp4)
 
 以上附件已发布；精确视频与日志对应关系仍未逐帧核实。
