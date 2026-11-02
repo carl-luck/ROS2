@@ -1,0 +1,20 @@
+{
+  "config_version": "detour_execute_v1",
+  "start_error_limit_rad": 0.01,
+  "endpoint_error_limit_rad": 0.005,
+  "stopped_speed_limit_rad_s": 0.001,
+  "stopped_hold_sim_s": 0.5,
+  "stopped_wait_wall_s": 8.0,
+  "feedback_receive_limit_wall_s": 1.0,
+  "feedback_clock_difference_limit_s": 0.5,
+  "clock_stall_limit_wall_s": 3.0,
+  "controller_tracking_error_limit_rad": 0.05,
+  "state_check_period_wall_s": 0.25,
+  "scene_check_period_wall_s": 1.0,
+  "monitor_response_timeout_wall_s": 2.0,
+  "action_wall_timeout_scale": 4.0,
+  "action_wall_timeout_margin_s": 15.0,
+  "accept_wait_wall_s": 5.0,
+  "cancel_wait_wall_s": 4.0,
+  "cancel_result_wait_wall_s": 8.0
+}

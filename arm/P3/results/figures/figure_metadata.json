@@ -1,0 +1,56 @@
+{
+  "purpose": "Exploratory project results; no significance or reliability claim",
+  "source_sha256": {
+    "mpc_tracking_log.csv": "c30b8e6335f0eaf5f66e89f5ea92d595c380dccd32528e42d1d279f31da10493",
+    "p_gazebo_tracking_report.json": "6d2d1ed1c6b808ec82c608b53881d5902c113f9e2ec77fe716a01ff6566bfc8e",
+    "tf_report.json": "582af6c05310cce32a3d846efff3dadf8876e01ba8402ec38b5c2f3ac6ee7196",
+    "gazebo_comparison_report.json": "1e96ea4b6cafee261bf3135932709e35a16eb3df0793105a8ce61aeef5178d82",
+    "planning_trials.csv": "217db991185118468970feb862ba0dbf90a3710a2766e12a2bb949e4912cb0c2",
+    "offline_report.json": "7ad93d5eed1c8f0f9f93130d8d1312ba64301f157fec1053bf299871b740d0a1",
+    "p_tracking_log.csv": "3ba1ce431e97b08ed81291dfb90166d023ee2cf98b562d73111d51d94fac8d93",
+    "planning_comparison_report.json": "b957a0683a9d255ab539fc4ad1644091df65d75503f0bdd60ba093161c8cf2a9",
+    "mpc_gazebo_tracking_report.json": "a1e01f177db8becc41736c7b0be523387f6e492ed03be9a4d1bc31ecf893aabd"
+  },
+  "profile": {
+    "baseline": {
+      "n": 10,
+      "validated": 6,
+      "missing_planning_time": 0
+    },
+    "dense": {
+      "n": 10,
+      "validated": 10,
+      "missing_planning_time": 0
+    },
+    "p": {
+      "samples": 9563,
+      "missing_numeric": 0,
+      "duration_log_s": 191.5740000000078,
+      "compute_over_20ms": 0
+    },
+    "mpc": {
+      "samples": 9562,
+      "missing_numeric": 0,
+      "duration_log_s": 191.57200000000012,
+      "compute_over_20ms": 3
+    }
+  },
+  "figures": [
+    {
+      "name": "planning_resolution",
+      "caption": "10 baseline then 10 dense trials; identical scene and external validation. All requests shown, including failures. No confidence intervals or paired seeds.",
+      "size_inches": [
+        10.0,
+        4.0
+      ]
+    },
+    {
+      "name": "gazebo_tracking",
+      "caption": "One full run per controller, same reference and limits, slightly different initial states. A displays all logged samples including settling; plot floor 1e-12 rad. B uses motion-period samples. C includes all control cycles; vertical line is 20 ms. No hardware accuracy or statistical superiority claim.",
+      "size_inches": [
+        13.0,
+        4.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "config_version": "failure_cases_v1",
+  "group": "ur_manipulator",
+  "tip_link": "tool0",
+  "reference_frame": "world",
+  "pipeline_id": "move_group",
+  "planner_id": "RRTConnectkConfigDefault",
+  "ik_timeout_s": 1.0,
+  "unreachable_position_m": [5.0, 0.0, 0.5],
+  "tiny_planning_budget_s": 0.000001,
+  "planning_attempts": 1,
+  "velocity_scaling": 0.1,
+  "acceleration_scaling": 0.1,
+  "joint_goal_tolerance_rad": 0.0001
+}

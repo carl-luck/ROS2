@@ -1,0 +1,92 @@
+{
+  "started_at": "2026-11-02T11:56:19.515018+08:00",
+  "inputs_dir": "/home/carl/ROS2/arm/P3/data/runs/20261102_000510+0800_detour_plan_61b3fb60/execution_inputs_20261102_000540+0800_d8419fde",
+  "config": {
+    "config_version": "detour_execute_v1",
+    "start_error_limit_rad": 0.01,
+    "endpoint_error_limit_rad": 0.005,
+    "stopped_speed_limit_rad_s": 0.001,
+    "stopped_hold_sim_s": 0.5,
+    "stopped_wait_wall_s": 8.0,
+    "feedback_receive_limit_wall_s": 1.0,
+    "feedback_clock_difference_limit_s": 0.5,
+    "clock_stall_limit_wall_s": 3.0,
+    "controller_tracking_error_limit_rad": 0.05,
+    "state_check_period_wall_s": 0.25,
+    "scene_check_period_wall_s": 1.0,
+    "monitor_response_timeout_wall_s": 2.0,
+    "action_wall_timeout_scale": 4.0,
+    "action_wall_timeout_margin_s": 15.0,
+    "accept_wait_wall_s": 5.0,
+    "cancel_wait_wall_s": 4.0,
+    "cancel_result_wait_wall_s": 8.0
+  },
+  "passed": true,
+  "phases": {
+    "detour": {
+      "passed": true,
+      "sent": true,
+      "status": "expected_cancel_test_passed",
+      "controllers": [
+        {
+          "name": "joint_state_broadcaster",
+          "state": "active",
+          "claimed_interfaces": []
+        },
+        {
+          "name": "joint_trajectory_controller",
+          "state": "active",
+          "claimed_interfaces": [
+            "shoulder_pan_joint/position",
+            "shoulder_lift_joint/position",
+            "elbow_joint/position",
+            "wrist_1_joint/position",
+            "wrist_2_joint/position",
+            "wrist_3_joint/position"
+          ]
+        }
+      ],
+      "start_minus_actual_rad": [
+        -3.861834481555526e-05,
+        5.493525829569634e-06,
+        -5.5568191150934254e-05,
+        1.1421381673537567e-05,
+        -9.497761000099025e-05,
+        -4.291286896968005e-05
+      ],
+      "send_at": "2026-11-02T11:56:26.625869+08:00",
+      "action_wall_budget_s": 122.283233424
+    }
+  },
+  "active_phase": "detour",
+  "next_motion_allowed": false,
+  "scheduled_cancel_triggered": true,
+  "cancel_after_sim_s": 2.0,
+  "test_type": "direct_controller_action_cancel_not_moveit_cancel_or_emergency_stop",
+  "action_endpoint": "/joint_trajectory_controller/follow_joint_trajectory",
+  "selected_path": "detour",
+  "input_report_sha256": "c1ad32edfd90f28f8fdecb5d76c30fef0331aec9362b310c7b8bad40d802a81a",
+  "limitations": [
+    "Simulation only. Supervision is in the sending process, not an independent safety mechanism.",
+    "Runtime collision checks sample actual states; they are not continuous swept-volume guarantees.",
+    "Scene changes are detected by periodic queries, not instantaneously.",
+    "Client action elapsed time includes communication/processing; not pure robot motion time.",
+    "No automatic return to start, retry, or resumption after failure.",
+    "Direct controller cancellation is distinct from MoveIt ExecuteTrajectory cancellation; the earlier MoveIt failure remains unresolved."
+  ],
+  "cancel_trigger_elapsed_sim_s": 2.0,
+  "max_observed_tracking_error_before_cancel_rad": 0.004200845155056476,
+  "valid_runtime_state_checks_before_cancel": 23,
+  "unchanged_scene_checks_before_cancel": 6,
+  "status": "cancel_ack_terminal_canceled_and_stopped_passed",
+  "cancel_requested_goals": 1,
+  "cancel_return_code": 0,
+  "cancel_acknowledged": true,
+  "final_action_status": 5,
+  "final_controller_error_code": 0,
+  "stopped_after_failure": true,
+  "post_cancel_state_valid": true,
+  "post_cancel_scene_unchanged": true,
+  "expected_trigger_reason": "RuntimeError: Scheduled cancellation test trigger",
+  "finished_at": "2026-11-02T11:56:33.619371+08:00"
+}

@@ -1,0 +1,91 @@
+{
+  "case": "solver_failure",
+  "controller": "mpc",
+  "injection": "failure",
+  "status": "passed",
+  "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_failure/guard",
+  "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_failure/tracking",
+  "guard_status": "completed",
+  "guard_reason": "motion_complete_received",
+  "tracking_status": "degraded",
+  "stop_verified": true,
+  "actual_speed_max_rad_s": [
+    0.007866076023178344,
+    0.004719645613936115,
+    0.012649373836079886,
+    0.004719645614063407,
+    0.009487030376607737,
+    0.006292860818557781
+  ],
+  "injected_solver_row": {
+    "elapsed_sim_s": "2.012000000000171",
+    "solve_wall_s": "0.00097567995544523",
+    "status": "injected_solver_exception",
+    "fallback": "True",
+    "injection": "failure",
+    "iterations": "0",
+    "limiter_correction_max_rad_s": "0.0"
+  },
+  "metrics": [
+    {
+      "joint": "shoulder_pan_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 9.585695578428933e-06,
+      "iae_rad_s": 0.0001409686291999757,
+      "max_abs_error_rad": 1.8981012002171338e-05,
+      "command_total_variation_rad_s": 0.06307537762098536,
+      "command_rate_rms_rad_s2": 0.00425539948858488,
+      "max_requested_speed_rad_s": 0.007866076023178353
+    },
+    {
+      "joint": "shoulder_lift_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 5.7514173992710605e-06,
+      "iae_rad_s": 8.458117831961309e-05,
+      "max_abs_error_rad": 1.1388607320528266e-05,
+      "command_total_variation_rad_s": 0.03784522657251085,
+      "command_rate_rms_rad_s2": 0.0025532396931592337,
+      "max_requested_speed_rad_s": 0.00471964561385947
+    },
+    {
+      "joint": "elbow_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 3.053204386922356e-05,
+      "iae_rad_s": 0.00044884302046027593,
+      "max_abs_error_rad": 6.308998740071903e-05,
+      "command_total_variation_rad_s": 0.20294078221430317,
+      "command_rate_rms_rad_s2": 0.013730930239880219,
+      "max_requested_speed_rad_s": 0.01265807726473551
+    },
+    {
+      "joint": "wrist_1_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 5.751417590930172e-06,
+      "iae_rad_s": 8.458118129975632e-05,
+      "max_abs_error_rad": 1.1388607713991306e-05,
+      "command_total_variation_rad_s": 0.037845226574313134,
+      "command_rate_rms_rad_s2": 0.0025532396932379927,
+      "max_requested_speed_rad_s": 0.004719645612703862
+    },
+    {
+      "joint": "wrist_2_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 2.2899032707021084e-05,
+      "iae_rad_s": 0.00033663226275702145,
+      "max_abs_error_rad": 4.7317489973549426e-05,
+      "command_total_variation_rad_s": 0.15220558664031397,
+      "command_rate_rms_rad_s2": 0.010298197678437973,
+      "max_requested_speed_rad_s": 0.00949355794810794
+    },
+    {
+      "joint": "wrist_3_joint",
+      "analyzed_duration_sim_s": 16.985999999999876,
+      "rmse_rad": 7.668556461175104e-06,
+      "iae_rad_s": 0.00011277490333672883,
+      "max_abs_error_rad": 1.518480959711993e-05,
+      "command_total_variation_rad_s": 0.05046030209674335,
+      "command_rate_rms_rad_s2": 0.003404319590866671,
+      "max_requested_speed_rad_s": 0.006292860818557775
+    }
+  ]
+}

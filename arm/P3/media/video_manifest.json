@@ -1,0 +1,11 @@
+{
+  "file": "20261101_ur5e_detour_demo_original.mp4",
+  "original_windows_path": "C:/Users/朱朝阳/Videos/202611012331.mp4",
+  "size_bytes": 33581138,
+  "sha256": "67e533839dff773853c0a56da99263e766fa538c7c60c735687c7e1c52606ae6",
+  "processing": "Byte-for-byte copy; no trimming, re-encoding or deletion of original.",
+  "association": "User-provided P3 demonstration; exact frame-to-log correspondence is unverified. Filename time alone is not used as proof.",
+  "related_passed_sequence": "../data/runs/20261101_230017+0800_detour_plan_b493ef44/execution_inputs_20261101_231430+0800_0f87bf74/sequence_20261101_232914+0800_23180fb9",
+  "visual_review": "Not frame-by-frame reviewed",
+  "publication": "Local archive only. No Git commit, push, or external upload performed."
+}

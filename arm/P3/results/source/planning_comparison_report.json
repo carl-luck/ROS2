@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "execution_requested": false,
+  "parameter_restored": true,
+  "design": "10 baseline followed by 10 tuned; unpaired stochastic development trials, no retries",
+  "source_sha256": "a993bec3fe2a8587744e8f43b76ee49ba8f833cddb75664ab65555c3f6600e69",
+  "limits": [
+    "Planner parameter readback does not prove internal interpolation density.",
+    "External linear sampling is unchanged; no controller spline or continuous collision guarantee.",
+    "Sequential groups may have order effects; 10 trials per group are exploratory."
+  ],
+  "conditions": {
+    "baseline": {
+      "trials": 10,
+      "validated_count": 6,
+      "validated_rate": 0.6,
+      "planner_success_count": 7,
+      "planning_time_s_validated_only": {
+        "median": 0.057507960999999996,
+        "min": 0.041488558,
+        "max": 0.109990514
+      },
+      "path_length_rad_validated_only": {
+        "median": 6.513587379475188,
+        "min": 3.9548448844904134,
+        "max": 13.591921890456842
+      },
+      "duration_s_validated_only": {
+        "median": 13.465658544,
+        "min": 9.383632635,
+        "max": 30.491290226
+      }
+    },
+    "dense": {
+      "trials": 10,
+      "validated_count": 10,
+      "validated_rate": 1.0,
+      "planner_success_count": 10,
+      "planning_time_s_validated_only": {
+        "median": 0.255419048,
+        "min": 0.104416969,
+        "max": 0.6272233730000001
+      },
+      "path_length_rad_validated_only": {
+        "median": 6.136256543926323,
+        "min": 2.5747228204374273,
+        "max": 10.083518654420494
+      },
+      "duration_s_validated_only": {
+        "median": 15.3503794415,
+        "min": 7.495849338,
+        "max": 25.07299128
+      }
+    }
+  },
+  "completed_trials": 20
+}

@@ -1,0 +1,19 @@
+{
+  "config_version": "tracking_offline_v1",
+  "ts": 0.02,
+  "horizon": 25,
+  "kp": 2.0,
+  "q_weight": 100.0,
+  "v_weight": 1.0,
+  "du_weight": 0.1,
+  "vmax": 0.02,
+  "rate": 0.1,
+  "joint_margin": 0.05,
+  "settle_s": 2.0,
+  "solver_time_limit_s": 0.02,
+  "constraint_tolerance": 0.00001,
+  "scenarios": [
+    {"name": "ideal", "delay_steps": 0, "velocity_tau_s": 0.0},
+    {"name": "lag_delay", "delay_steps": 1, "velocity_tau_s": 0.08}
+  ]
+}

@@ -1,0 +1,779 @@
+{
+  "status": "completed",
+  "mode": "all",
+  "repeats": 3,
+  "cases": [
+    {
+      "case": "1_baseline",
+      "controller": "baseline",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/1_baseline/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/1_baseline/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007920375460571881,
+        0.00475222527666635,
+        0.012886797351794831,
+        0.004752225277976904,
+        0.009665098012030308,
+        0.006336300368461309
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 5.856580995749533e-05,
+          "iae_rad_s": 0.0008795375332128022,
+          "max_abs_error_rad": 9.780203985950905e-05,
+          "command_total_variation_rad_s": 0.06362074361246797,
+          "command_rate_rms_rad_s2": 0.004275814060994652,
+          "max_requested_speed_rad_s": 0.00792037546057189
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 3.513948620133628e-05,
+          "iae_rad_s": 0.0005277225232774514,
+          "max_abs_error_rad": 5.8681224469170346e-05,
+          "command_total_variation_rad_s": 0.038172446169359386,
+          "command_rate_rms_rad_s2": 0.0025654884367196447,
+          "max_requested_speed_rad_s": 0.00475222527657959
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 0.00016152360751092983,
+          "iae_rad_s": 0.0024281602519997496,
+          "max_abs_error_rad": 0.00027196632547686617,
+          "command_total_variation_rad_s": 0.20631203788579172,
+          "command_rate_rms_rad_s2": 0.013877597378180615,
+          "max_requested_speed_rad_s": 0.012886797350796661
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 3.513948702717665e-05,
+          "iae_rad_s": 0.0005277225357214339,
+          "max_abs_error_rad": 5.8681226271062314e-05,
+          "command_total_variation_rad_s": 0.03817244617632093,
+          "command_rate_rms_rad_s2": 0.0025654884371847458,
+          "max_requested_speed_rad_s": 0.004752225276562714
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 0.00012114270489651037,
+          "iae_rad_s": 0.0018211201793809132,
+          "max_abs_error_rad": 0.00020397474263631962,
+          "command_total_variation_rad_s": 0.15473402839358724,
+          "command_rate_rms_rad_s2": 0.010408198032222248,
+          "max_requested_speed_rad_s": 0.009665098011139149
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.98400000000015,
+          "rmse_rad": 4.685264795928402e-05,
+          "iae_rad_s": 0.000703630026473013,
+          "max_abs_error_rad": 7.82416318708054e-05,
+          "command_total_variation_rad_s": 0.05089659488990466,
+          "command_rate_rms_rad_s2": 0.003420651248791354,
+          "max_requested_speed_rad_s": 0.006336300368461305
+        }
+      ]
+    },
+    {
+      "case": "1_mpc",
+      "controller": "mpc",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/1_mpc/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/1_mpc/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007866862474254981,
+        0.004720117484567283,
+        0.012646089997829743,
+        0.0047201174846840995,
+        0.009484567497900376,
+        0.006293489979418849
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 9.124096219398334e-06,
+          "iae_rad_s": 0.00013400485048535533,
+          "max_abs_error_rad": 1.8505478974438494e-05,
+          "command_total_variation_rad_s": 0.06302590757685972,
+          "command_rate_rms_rad_s2": 0.0042508155835702605,
+          "max_requested_speed_rad_s": 0.00786686247425499
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 5.4744577838217114e-06,
+          "iae_rad_s": 8.040291108833015e-05,
+          "max_abs_error_rad": 1.1103287517189031e-05,
+          "command_total_variation_rad_s": 0.03781554454555434,
+          "command_rate_rms_rad_s2": 0.002550489350136344,
+          "max_requested_speed_rad_s": 0.00472011748450321
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 2.936182771018193e-05,
+          "iae_rad_s": 0.00042883934442005235,
+          "max_abs_error_rad": 5.9101303114799525e-05,
+          "command_total_variation_rad_s": 0.20245352145793655,
+          "command_rate_rms_rad_s2": 0.013657149903075618,
+          "max_requested_speed_rad_s": 0.012646089998844052
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 5.4744579759502325e-06,
+          "iae_rad_s": 8.040291408271e-05,
+          "max_abs_error_rad": 1.1103287955727126e-05,
+          "command_total_variation_rad_s": 0.0378155445430194,
+          "command_rate_rms_rad_s2": 0.0025504893501087926,
+          "max_requested_speed_rad_s": 0.004720117483381249
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 2.2021370589265463e-05,
+          "iae_rad_s": 0.0003216295058130215,
+          "max_abs_error_rad": 4.432597687227882e-05,
+          "command_total_variation_rad_s": 0.15184014107763713,
+          "command_rate_rms_rad_s2": 0.010242862426563805,
+          "max_requested_speed_rad_s": 0.009484567498617794
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 7.2992769739451185e-06,
+          "iae_rad_s": 0.00010720388036514954,
+          "max_abs_error_rad": 1.4804383175328478e-05,
+          "command_total_variation_rad_s": 0.05042072606147088,
+          "command_rate_rms_rad_s2": 0.003400652466855158,
+          "max_requested_speed_rad_s": 0.006293489979418843
+        }
+      ]
+    },
+    {
+      "case": "2_mpc",
+      "controller": "mpc",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/2_mpc/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/2_mpc/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007864853948213847,
+        0.0047189123689956175,
+        0.012647327348738977,
+        0.004718912369397236,
+        0.00948549551119069,
+        0.006291883158553594
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 9.279883213005583e-06,
+          "iae_rad_s": 0.00013541504768144435,
+          "max_abs_error_rad": 2.109772214756167e-05,
+          "command_total_variation_rad_s": 0.06301419737322683,
+          "command_rate_rms_rad_s2": 0.004248672145937426,
+          "max_requested_speed_rad_s": 0.007864853948213837
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 5.5679299803231486e-06,
+          "iae_rad_s": 8.12490294591735e-05,
+          "max_abs_error_rad": 1.2658633426809729e-05,
+          "command_total_variation_rad_s": 0.0378085184202845,
+          "command_rate_rms_rad_s2": 0.0025492032874087625,
+          "max_requested_speed_rad_s": 0.004718912369053306
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 2.8817511069327302e-05,
+          "iae_rad_s": 0.0004210191038938963,
+          "max_abs_error_rad": 6.666609306472775e-05,
+          "command_total_variation_rad_s": 0.20244193934178698,
+          "command_rate_rms_rad_s2": 0.013644259804786592,
+          "max_requested_speed_rad_s": 0.012647327351372266
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 5.567930174284286e-06,
+          "iae_rad_s": 8.124903265842903e-05,
+          "max_abs_error_rad": 1.2658633870676894e-05,
+          "command_total_variation_rad_s": 0.03780851840075367,
+          "command_rate_rms_rad_s2": 0.002549203286589264,
+          "max_requested_speed_rad_s": 0.0047189123706704705
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 2.1613133139349268e-05,
+          "iae_rad_s": 0.00031576432579501104,
+          "max_abs_error_rad": 4.999956940355231e-05,
+          "command_total_variation_rad_s": 0.151831454454228,
+          "command_rate_rms_rad_s2": 0.010233194851258754,
+          "max_requested_speed_rad_s": 0.009485495509271823
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.998000000000047,
+          "rmse_rad": 7.4239065688946585e-06,
+          "iae_rad_s": 0.00010833203812210638,
+          "max_abs_error_rad": 1.6878177713702813e-05,
+          "command_total_variation_rad_s": 0.05041135789857221,
+          "command_rate_rms_rad_s2": 0.0033989377167493624,
+          "max_requested_speed_rad_s": 0.006291883158553593
+        }
+      ]
+    },
+    {
+      "case": "2_baseline",
+      "controller": "baseline",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/2_baseline/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/2_baseline/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007917080774718787,
+        0.004750248465158706,
+        0.012891818839976175,
+        0.004750248466429436,
+        0.009668864129542338,
+        0.006333664619779365
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 5.698600697180343e-05,
+          "iae_rad_s": 0.0008638106691906016,
+          "max_abs_error_rad": 9.451057964900145e-05,
+          "command_total_variation_rad_s": 0.06360382173818088,
+          "command_rate_rms_rad_s2": 0.004273824217895912,
+          "max_requested_speed_rad_s": 0.007917080774718796
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 3.419160441495567e-05,
+          "iae_rad_s": 0.0005182864050594157,
+          "max_abs_error_rad": 5.6706348336099666e-05,
+          "command_total_variation_rad_s": 0.03816229304394152,
+          "command_rate_rms_rad_s2": 0.0025642945307960976,
+          "max_requested_speed_rad_s": 0.004750248465088568
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 0.00016015759876497152,
+          "iae_rad_s": 0.002405567620637642,
+          "max_abs_error_rad": 0.00026733661707947776,
+          "command_total_variation_rad_s": 0.20637721148724408,
+          "command_rate_rms_rad_s2": 0.013876717994190891,
+          "max_requested_speed_rad_s": 0.012891818842639657
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 3.4191605281119895e-05,
+          "iae_rad_s": 0.0005182864186349431,
+          "max_abs_error_rad": 5.670635013488301e-05,
+          "command_total_variation_rad_s": 0.03816229304693246,
+          "command_rate_rms_rad_s2": 0.0025642945309360524,
+          "max_requested_speed_rad_s": 0.004750248465093453
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 0.00012011819837167316,
+          "iae_rad_s": 0.0018041757077386419,
+          "max_abs_error_rad": 0.00020050246080025036,
+          "command_total_variation_rad_s": 0.1547829085880844,
+          "command_rate_rms_rad_s2": 0.010407538493735297,
+          "max_requested_speed_rad_s": 0.009668864127611749
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 4.5588805570763116e-05,
+          "iae_rad_s": 0.0006910485352541833,
+          "max_abs_error_rad": 7.560846370277541e-05,
+          "command_total_variation_rad_s": 0.05088305739047469,
+          "command_rate_rms_rad_s2": 0.003419059374312406,
+          "max_requested_speed_rad_s": 0.006333664619779359
+        }
+      ]
+    },
+    {
+      "case": "3_baseline",
+      "controller": "baseline",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/3_baseline/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/3_baseline/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007920487970099324,
+        0.004752292782381521,
+        0.012918217651922588,
+        0.004752292783622446,
+        0.009688663237063432,
+        0.006336390376083781
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 5.735935817823236e-05,
+          "iae_rad_s": 0.0008647381880588056,
+          "max_abs_error_rad": 0.00010201893774887394,
+          "command_total_variation_rad_s": 0.06362299954835747,
+          "command_rate_rms_rad_s2": 0.004275747151520266,
+          "max_requested_speed_rad_s": 0.007920487970099333
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 3.44156151457425e-05,
+          "iae_rad_s": 0.0005188429163573684,
+          "max_abs_error_rad": 6.121136317971398e-05,
+          "command_total_variation_rad_s": 0.03817379973027887,
+          "command_rate_rms_rad_s2": 0.0025654482909892497,
+          "max_requested_speed_rad_s": 0.004752292782314572
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 0.00015988722331316215,
+          "iae_rad_s": 0.0024126134868393285,
+          "max_abs_error_rad": 0.0002684095771692957,
+          "command_total_variation_rad_s": 0.20644332245604502,
+          "command_rate_rms_rad_s2": 0.013875675327440351,
+          "max_requested_speed_rad_s": 0.012918217650910342
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 3.441561599811828e-05,
+          "iae_rad_s": 0.0005188429293105953,
+          "max_abs_error_rad": 6.121136485681689e-05,
+          "command_total_variation_rad_s": 0.03817379973522425,
+          "command_rate_rms_rad_s2": 0.0025654482912911896,
+          "max_requested_speed_rad_s": 0.004752292782301693
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 0.00011991541677194728,
+          "iae_rad_s": 0.001809460106734596,
+          "max_abs_error_rad": 0.00020130718142925136,
+          "command_total_variation_rad_s": 0.1548324918167549,
+          "command_rate_rms_rad_s2": 0.01040675649382035,
+          "max_requested_speed_rad_s": 0.009688663236245725
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.99000000000001,
+          "rmse_rad": 4.5887486535807624e-05,
+          "iae_rad_s": 0.0006917905503493567,
+          "max_abs_error_rad": 8.16151501834908e-05,
+          "command_total_variation_rad_s": 0.05089839963861517,
+          "command_rate_rms_rad_s2": 0.0034205977212118876,
+          "max_requested_speed_rad_s": 0.006336390376083777
+        }
+      ]
+    },
+    {
+      "case": "3_mpc",
+      "controller": "mpc",
+      "injection": "none",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/3_mpc/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/3_mpc/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "completed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007865803618711618,
+        0.004719482171227042,
+        0.012646224522850788,
+        0.004719482171320865,
+        0.009484668391460484,
+        0.006292642894985481
+      ],
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 9.18381603147406e-06,
+          "iae_rad_s": 0.00013481128520834518,
+          "max_abs_error_rad": 2.00010665221146e-05,
+          "command_total_variation_rad_s": 0.06303471600813905,
+          "command_rate_rms_rad_s2": 0.00425364559303544,
+          "max_requested_speed_rad_s": 0.007865803618711625
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 5.5102896711942745e-06,
+          "iae_rad_s": 8.088677192991315e-05,
+          "max_abs_error_rad": 1.200063993134215e-05,
+          "command_total_variation_rad_s": 0.037820829604074215,
+          "command_rate_rms_rad_s2": 0.0025521873558056896,
+          "max_requested_speed_rad_s": 0.004719482171160229
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 2.920806371669613e-05,
+          "iae_rad_s": 0.00042878764428659556,
+          "max_abs_error_rad": 6.359418591228919e-05,
+          "command_total_variation_rad_s": 0.20250263419135373,
+          "command_rate_rms_rad_s2": 0.01366914874210813,
+          "max_requested_speed_rad_s": 0.01264622452185995
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 5.510289863460907e-06,
+          "iae_rad_s": 8.088677493129452e-05,
+          "max_abs_error_rad": 1.2000640034148802e-05,
+          "command_total_variation_rad_s": 0.037820829601423536,
+          "command_rate_rms_rad_s2": 0.002552187355745503,
+          "max_requested_speed_rad_s": 0.004719482170007067
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 2.1904090257846128e-05,
+          "iae_rad_s": 0.0003215596212742198,
+          "max_abs_error_rad": 4.7695639686925334e-05,
+          "command_total_variation_rad_s": 0.15187697025337416,
+          "command_rate_rms_rad_s2": 0.01025183215833574,
+          "max_requested_speed_rad_s": 0.009484668390584884
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 7.347052823618611e-06,
+          "iae_rad_s": 0.0001078490281434104,
+          "max_abs_error_rad": 1.6000853217280203e-05,
+          "command_total_variation_rad_s": 0.05042777280648678,
+          "command_rate_rms_rad_s2": 0.0034029164744271883,
+          "max_requested_speed_rad_s": 0.0062926428949854766
+        }
+      ]
+    },
+    {
+      "case": "solver_failure",
+      "controller": "mpc",
+      "injection": "failure",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_failure/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_failure/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "degraded",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007866076023178344,
+        0.004719645613936115,
+        0.012649373836079886,
+        0.004719645614063407,
+        0.009487030376607737,
+        0.006292860818557781
+      ],
+      "injected_solver_row": {
+        "elapsed_sim_s": "2.012000000000171",
+        "solve_wall_s": "0.00097567995544523",
+        "status": "injected_solver_exception",
+        "fallback": "True",
+        "injection": "failure",
+        "iterations": "0",
+        "limiter_correction_max_rad_s": "0.0"
+      },
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 9.585695578428933e-06,
+          "iae_rad_s": 0.0001409686291999757,
+          "max_abs_error_rad": 1.8981012002171338e-05,
+          "command_total_variation_rad_s": 0.06307537762098536,
+          "command_rate_rms_rad_s2": 0.00425539948858488,
+          "max_requested_speed_rad_s": 0.007866076023178353
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 5.7514173992710605e-06,
+          "iae_rad_s": 8.458117831961309e-05,
+          "max_abs_error_rad": 1.1388607320528266e-05,
+          "command_total_variation_rad_s": 0.03784522657251085,
+          "command_rate_rms_rad_s2": 0.0025532396931592337,
+          "max_requested_speed_rad_s": 0.00471964561385947
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 3.053204386922356e-05,
+          "iae_rad_s": 0.00044884302046027593,
+          "max_abs_error_rad": 6.308998740071903e-05,
+          "command_total_variation_rad_s": 0.20294078221430317,
+          "command_rate_rms_rad_s2": 0.013730930239880219,
+          "max_requested_speed_rad_s": 0.01265807726473551
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 5.751417590930172e-06,
+          "iae_rad_s": 8.458118129975632e-05,
+          "max_abs_error_rad": 1.1388607713991306e-05,
+          "command_total_variation_rad_s": 0.037845226574313134,
+          "command_rate_rms_rad_s2": 0.0025532396932379927,
+          "max_requested_speed_rad_s": 0.004719645612703862
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 2.2899032707021084e-05,
+          "iae_rad_s": 0.00033663226275702145,
+          "max_abs_error_rad": 4.7317489973549426e-05,
+          "command_total_variation_rad_s": 0.15220558664031397,
+          "command_rate_rms_rad_s2": 0.010298197678437973,
+          "max_requested_speed_rad_s": 0.00949355794810794
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.985999999999876,
+          "rmse_rad": 7.668556461175104e-06,
+          "iae_rad_s": 0.00011277490333672883,
+          "max_abs_error_rad": 1.518480959711993e-05,
+          "command_total_variation_rad_s": 0.05046030209674335,
+          "command_rate_rms_rad_s2": 0.003404319590866671,
+          "max_requested_speed_rad_s": 0.006292860818557775
+        }
+      ]
+    },
+    {
+      "case": "solver_timeout",
+      "controller": "mpc",
+      "injection": "timeout",
+      "status": "passed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_timeout/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/solver_timeout/tracking",
+      "guard_status": "completed",
+      "guard_reason": "motion_complete_received",
+      "tracking_status": "degraded",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007868282575421826,
+        0.004720969545379656,
+        0.012650933837318152,
+        0.0047209695457366046,
+        0.009488200377829648,
+        0.006294626060317273
+      ],
+      "injected_solver_row": {
+        "elapsed_sim_s": "2.0020000000004075",
+        "solve_wall_s": "0.029132728988770396",
+        "status": "solved; wall_time_limit_exceeded",
+        "fallback": "True",
+        "injection": "timeout",
+        "iterations": "25",
+        "limiter_correction_max_rad_s": "0.0"
+      },
+      "metrics": [
+        {
+          "joint": "shoulder_pan_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 9.105716232643817e-06,
+          "iae_rad_s": 0.00013388063646336428,
+          "max_abs_error_rad": 2.07006611689306e-05,
+          "command_total_variation_rad_s": 0.0630648953758916,
+          "command_rate_rms_rad_s2": 0.0042527507803474,
+          "max_requested_speed_rad_s": 0.007868282575421817
+        },
+        {
+          "joint": "shoulder_lift_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 5.463429794211192e-06,
+          "iae_rad_s": 8.032838272862991e-05,
+          "max_abs_error_rad": 1.2420396832357739e-05,
+          "command_total_variation_rad_s": 0.037838937221938554,
+          "command_rate_rms_rad_s2": 0.0025516504680499455,
+          "max_requested_speed_rad_s": 0.004720969545434589
+        },
+        {
+          "joint": "elbow_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 2.9406472913791206e-05,
+          "iae_rad_s": 0.0004302048164793579,
+          "max_abs_error_rad": 6.571404918075813e-05,
+          "command_total_variation_rad_s": 0.20280935611260847,
+          "command_rate_rms_rad_s2": 0.013714889950173262,
+          "max_requested_speed_rad_s": 0.012650933834660571
+        },
+        {
+          "joint": "wrist_1_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 5.4634299950315636e-06,
+          "iae_rad_s": 8.032838592953233e-05,
+          "max_abs_error_rad": 1.2420397254464532e-05,
+          "command_total_variation_rad_s": 0.03783893720859713,
+          "command_rate_rms_rad_s2": 0.002551650467412306,
+          "max_requested_speed_rad_s": 0.004720969546996289
+        },
+        {
+          "joint": "wrist_2_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 2.2033009532660425e-05,
+          "iae_rad_s": 0.0003223631347552855,
+          "max_abs_error_rad": 4.9285536379027606e-05,
+          "command_total_variation_rad_s": 0.15210701669735133,
+          "command_rate_rms_rad_s2": 0.010285861734838248,
+          "max_requested_speed_rad_s": 0.009488200379713865
+        },
+        {
+          "joint": "wrist_3_joint",
+          "analyzed_duration_sim_s": 16.994000000000142,
+          "rmse_rad": 7.284572984566644e-06,
+          "iae_rad_s": 0.00010710450914737886,
+          "max_abs_error_rad": 1.656052893238627e-05,
+          "command_total_variation_rad_s": 0.05045191630066127,
+          "command_rate_rms_rad_s2": 0.003402200624276973,
+          "max_requested_speed_rad_s": 0.006294626060317271
+        }
+      ]
+    },
+    {
+      "case": "request_crash",
+      "controller": "mpc",
+      "injection": "none",
+      "status": "passed",
+      "injection_observation": {
+        "elapsed_sim_s": 2.005999999999858,
+        "last_request": [
+          0.007862103622724005,
+          -0.004717262173770846,
+          -0.000670413357158188,
+          -0.0047172621752931115,
+          -0.000502810013268648,
+          -0.006289682898162222
+        ],
+        "crash_test": true
+      },
+      "injection_runner_monotonic_s": 387219.9423019,
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/request_crash/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/request_crash/tracking",
+      "guard_status": "failed",
+      "guard_reason": "request_source_sim_stamp_stale",
+      "tracking_status": "running",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        0.007865015739033802,
+        0.004719009443511323,
+        0.012634658565240257,
+        0.004719009443922773,
+        0.009475993923774798,
+        0.006292012591205409
+      ],
+      "last_request_to_first_stopping_zero_wall_s": 0.24615943903336301,
+      "timing_note": "guard receive to publication wall time; not exact kill-to-physical-stop latency"
+    }
+  ],
+  "config": {
+    "ts": 0.02,
+    "horizon": 25,
+    "kp": 2.0,
+    "q_weight": 100.0,
+    "v_weight": 1.0,
+    "du_weight": 0.1,
+    "vmax": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "rate": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "scales": [
+      0.01,
+      -0.006,
+      0.008,
+      -0.006,
+      0.006,
+      -0.008
+    ],
+    "periods": [
+      8.0,
+      8.0,
+      4.0,
+      8.0,
+      4.0,
+      8.0
+    ],
+    "duration": 16.0,
+    "settle": 1.0,
+    "excursion": 0.035,
+    "joint_margin": 0.05,
+    "clearance": 0.003,
+    "feedback_timeout": 0.2,
+    "stall_timeout": 0.5,
+    "request_timeout": 0.3,
+    "stamp_tolerance": 0.15,
+    "heartbeat": 0.02,
+    "collision_period": 0.05,
+    "maximum_cycle": 0.1,
+    "maximum_wall": 100.0,
+    "solve_budget": 0.02,
+    "request_topic": "/p2/six_joint_velocity_request",
+    "status_topic": "/p2/six_guard_status",
+    "command_topic": "/forward_velocity_controller/commands",
+    "model": "q_next=q+Ts*u, six independent kinematic integrators; no torque dynamics or Cartesian obstacle constraints",
+    "limitations": "simulation only; sampled mesh clearance and floor checks, not continuous collision avoidance; no guard crash watchdog; emergency zero bypasses slew limit"
+  },
+  "source_sha256": "a0a808ba5f2481aabf1ace97a8979f14a735766e824405e26ac8321f23df55f4",
+  "note": "six independent kinematic joint integrators, sampled collision checks; no guard crash watchdog",
+  "reason": null,
+  "finished_at": "2026-10-31T02:09:11.660107+08:00"
+}

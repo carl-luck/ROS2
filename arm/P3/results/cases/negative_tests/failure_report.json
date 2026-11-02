@@ -1,0 +1,102 @@
+{
+  "started_at": "2026-11-01T23:51:41.329952+08:00",
+  "config": {
+    "config_version": "failure_cases_v1",
+    "group": "ur_manipulator",
+    "tip_link": "tool0",
+    "reference_frame": "world",
+    "pipeline_id": "move_group",
+    "planner_id": "RRTConnectkConfigDefault",
+    "ik_timeout_s": 1.0,
+    "unreachable_position_m": [
+      5.0,
+      0.0,
+      0.5
+    ],
+    "tiny_planning_budget_s": 1e-06,
+    "planning_attempts": 1,
+    "velocity_scaling": 0.1,
+    "acceleration_scaling": 0.1,
+    "joint_goal_tolerance_rad": 0.0001
+  },
+  "passed": true,
+  "tests": [
+    {
+      "name": "far_pose_ik",
+      "category": "expected_invalid_goal",
+      "error_code": -31,
+      "wall_s": 1.0132785469759256,
+      "passed": true,
+      "planning_request_sent": false,
+      "execution_request_sent": false
+    },
+    {
+      "name": "collision_target",
+      "category": "expected_invalid_goal",
+      "valid": false,
+      "contact_pairs": [
+        [
+          "forearm_link",
+          "p3_box_v1"
+        ],
+        [
+          "wrist_1_link",
+          "p3_box_v1"
+        ],
+        [
+          "wrist_2_link",
+          "p3_box_v1"
+        ],
+        [
+          "wrist_3_link",
+          "p3_box_v1"
+        ]
+      ],
+      "passed": true,
+      "planning_request_sent": false,
+      "execution_request_sent": false
+    },
+    {
+      "name": "tiny_budget",
+      "category": "controlled_budget_observation",
+      "requested_budget_s": 1e-06,
+      "error_code": -6,
+      "wall_s": 0.03213409602176398,
+      "interface_planning_time_s": 0.0,
+      "decision": "reject_error_code",
+      "observed_planning_success": false,
+      "passed": true,
+      "execution_request_sent": false,
+      "note": "Observation only; a success is not mislabeled as timeout. Not included in normal success-rate statistics."
+    },
+    {
+      "name": "injected_error_with_stale_nonempty_path",
+      "category": "synthetic_fault_injection",
+      "injected_error_code": -6,
+      "decision": "reject_error_code",
+      "passed": true,
+      "planning_request_sent": false,
+      "execution_request_sent": false
+    },
+    {
+      "name": "injected_success_with_empty_path",
+      "category": "synthetic_fault_injection",
+      "injected_error_code": 1,
+      "decision": "reject_empty_trajectory",
+      "passed": true,
+      "planning_request_sent": false,
+      "execution_request_sent": false
+    }
+  ],
+  "config_sha256": "bdfa548237e399fa151c083e6e5b21873a39b470b44aabed7d8c08bfe9251d69",
+  "source_plan_dir": "/home/carl/ROS2/arm/P3/data/runs/20261101_230017+0800_detour_plan_b493ef44",
+  "execution_requests_sent": 0,
+  "action_client_created": false,
+  "limits": [
+    "Uses virtual test start states; actual Gazebo robot is not reset or moved.",
+    "Tiny-budget outcome is observed, not guaranteed to fail.",
+    "Injected errors test local result handling, not a genuine OMPL timeout or full application cancellation path.",
+    "IK failure alone does not prove general global unreachability; this far target is a configured negative case."
+  ],
+  "finished_at": "2026-11-01T23:51:44.433932+08:00"
+}

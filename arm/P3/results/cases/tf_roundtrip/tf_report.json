@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-01T15:20:42.565676+08:00",
+  "source": "tool0",
+  "target": "world",
+  "script_sha256": "2b9410d24da0d42dcf123006be0d350ea6ef17c4e850bd14a0483b4711a16de9",
+  "passed": true,
+  "limits": [
+    "Checks simulated TF consistency, not physical calibration or real positioning accuracy.",
+    "Target frame is explicitly selected; not a MoveGroupInterface planning-frame query.",
+    "No TF publication, planning request or execution request is sent."
+  ],
+  "model_definition": {
+    "urdf_roots": [
+      "world"
+    ],
+    "srdf_chain": {
+      "base_link": "base_link",
+      "tip_link": "tool0"
+    }
+  },
+  "query_sim_stamp": {
+    "sec": 51716,
+    "nanosec": 504000000
+  },
+  "input_meaning": "A point and identity-oriented pose 0.02 m along tool/source +X; not a motion target.",
+  "tf_quaternion_norm": 0.9999999999999999,
+  "point_roundtrip_error_m": 6.713267788854885e-16,
+  "pose_roundtrip_position_error_m": 6.713267788854885e-16,
+  "pose_roundtrip_orientation_error_rad": 9.639956777322149e-16,
+  "source_origin_vs_translation_error_m": 0.0,
+  "diagnostics": {
+    "missing_frame": {
+      "expected": true,
+      "type": "LookupException",
+      "error": "\"p3_deliberately_missing_frame_6d94c2\" passed to lookupTransform argument source_frame does not exist. "
+    },
+    "future_time": {
+      "expected": true,
+      "type": "ExtrapolationException",
+      "error": "Lookup would require extrapolation into the future.  Requested time 51776.504000 but the latest data is at time 51716.504000, when looking up transform from frame [tool0] to frame [world]"
+    }
+  }
+}

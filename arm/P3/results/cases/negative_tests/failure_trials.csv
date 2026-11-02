@@ -1,0 +1,6 @@
+name,category,passed,error_code,wall_s,decision,execution_request_sent
+far_pose_ik,expected_invalid_goal,True,-31,1.0132785469759256,,False
+collision_target,expected_invalid_goal,True,,,,False
+tiny_budget,controlled_budget_observation,True,-6,0.03213409602176398,reject_error_code,False
+injected_error_with_stale_nonempty_path,synthetic_fault_injection,True,,,reject_error_code,False
+injected_success_with_empty_path,synthetic_fault_injection,True,,,reject_empty_trajectory,False

@@ -1,0 +1,21 @@
+{
+  "case": "1_baseline",
+  "controller": "baseline",
+  "injection": "none",
+  "status": "failed",
+  "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_015623_322566_six_joint_batch/1_baseline/guard",
+  "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_015623_322566_six_joint_batch/1_baseline/tracking",
+  "guard_status": "failed",
+  "guard_reason": "feedback_receive_gap_exceeded",
+  "tracking_status": "failed",
+  "stop_verified": true,
+  "actual_speed_max_rad_s": [
+    7.047314121155779e-19,
+    1.742619720399019e-13,
+    1.6052996605619985e-12,
+    1.2249519974749656e-12,
+    1.1903508099998447e-12,
+    3.0357660829594124e-18
+  ],
+  "reason": "no_accepted_requests"
+}

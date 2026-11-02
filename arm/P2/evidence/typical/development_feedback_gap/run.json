@@ -1,0 +1,91 @@
+{
+  "status": "failed",
+  "mode": "all",
+  "repeats": 3,
+  "cases": [
+    {
+      "case": "1_baseline",
+      "controller": "baseline",
+      "injection": "none",
+      "status": "failed",
+      "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_015623_322566_six_joint_batch/1_baseline/guard",
+      "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_015623_322566_six_joint_batch/1_baseline/tracking",
+      "guard_status": "failed",
+      "guard_reason": "feedback_receive_gap_exceeded",
+      "tracking_status": "failed",
+      "stop_verified": true,
+      "actual_speed_max_rad_s": [
+        7.047314121155779e-19,
+        1.742619720399019e-13,
+        1.6052996605619985e-12,
+        1.2249519974749656e-12,
+        1.1903508099998447e-12,
+        3.0357660829594124e-18
+      ],
+      "reason": "no_accepted_requests"
+    }
+  ],
+  "config": {
+    "ts": 0.02,
+    "horizon": 25,
+    "kp": 2.0,
+    "q_weight": 100.0,
+    "v_weight": 1.0,
+    "du_weight": 0.1,
+    "vmax": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "rate": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "scales": [
+      0.01,
+      -0.006,
+      0.008,
+      -0.006,
+      0.006,
+      -0.008
+    ],
+    "periods": [
+      8.0,
+      8.0,
+      4.0,
+      8.0,
+      4.0,
+      8.0
+    ],
+    "duration": 16.0,
+    "settle": 1.0,
+    "excursion": 0.035,
+    "joint_margin": 0.05,
+    "clearance": 0.003,
+    "feedback_timeout": 0.2,
+    "stall_timeout": 0.5,
+    "request_timeout": 0.3,
+    "stamp_tolerance": 0.15,
+    "heartbeat": 0.02,
+    "collision_period": 0.05,
+    "maximum_cycle": 0.1,
+    "maximum_wall": 100.0,
+    "solve_budget": 0.02,
+    "request_topic": "/p2/six_joint_velocity_request",
+    "status_topic": "/p2/six_guard_status",
+    "command_topic": "/forward_velocity_controller/commands",
+    "model": "q_next=q+Ts*u, six independent kinematic integrators; no torque dynamics or Cartesian obstacle constraints",
+    "limitations": "simulation only; sampled mesh clearance and floor checks, not continuous collision avoidance; no guard crash watchdog; emergency zero bypasses slew limit"
+  },
+  "source_sha256": "a0a808ba5f2481aabf1ace97a8979f14a735766e824405e26ac8321f23df55f4",
+  "note": "six independent kinematic joint integrators, sampled collision checks; no guard crash watchdog",
+  "reason": "no_accepted_requests",
+  "finished_at": "2026-10-31T01:57:03.964370+08:00"
+}

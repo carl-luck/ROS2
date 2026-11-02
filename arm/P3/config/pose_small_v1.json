@@ -1,0 +1,17 @@
+{
+  "config_version": "pose_small_v1",
+  "group": "ur_manipulator",
+  "tip_link": "tool0",
+  "target_reference_frame": "world",
+  "offset_in_tool_m": [0.005, 0.0, 0.0],
+  "pipeline_id": "move_group",
+  "planner_id": "RRTConnectkConfigDefault",
+  "planning_time_s": 5.0,
+  "planning_attempts": 1,
+  "velocity_scaling": 0.1,
+  "acceleration_scaling": 0.1,
+  "ik_timeout_s": 1.0,
+  "joint_goal_tolerance_rad": 0.0001,
+  "endpoint_position_tolerance_m": 0.001,
+  "endpoint_orientation_tolerance_rad": 0.01
+}

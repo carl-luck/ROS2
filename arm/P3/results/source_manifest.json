@@ -1,0 +1,11 @@
+{
+  "planning_trials.csv": "data/runs/20261102_200323+0800_resolution_comparison_e91af440/trials.csv",
+  "planning_comparison_report.json": "data/runs/20261102_200323+0800_resolution_comparison_e91af440/comparison_report.json",
+  "gazebo_comparison_report.json": "data/runs/20261102_212720+0800_gazebo_comparison_e3f1d5fb/gazebo_comparison_report.json",
+  "p_tracking_log.csv": "data/runs/20261102_210430+0800_gazebo_tracking_p_ca08cebd/tracking_log.csv",
+  "mpc_tracking_log.csv": "data/runs/20261102_211826+0800_gazebo_tracking_mpc_022babee/tracking_log.csv",
+  "p_gazebo_tracking_report.json": "data/runs/20261102_210430+0800_gazebo_tracking_p_ca08cebd/gazebo_tracking_report.json",
+  "mpc_gazebo_tracking_report.json": "data/runs/20261102_211826+0800_gazebo_tracking_mpc_022babee/gazebo_tracking_report.json",
+  "offline_report.json": "data/runs/20261102_202849+0800_tracking_offline_c52e9e11/offline_report.json",
+  "tf_report.json": "evidence/tf/20261101_152042+0800_stamped_transform_d0305591/tf_report.json"
+}

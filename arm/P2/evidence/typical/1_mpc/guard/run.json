@@ -1,0 +1,143 @@
+{
+  "status": "completed",
+  "reason": "motion_complete_received",
+  "role": "guard",
+  "controller": "mpc",
+  "injection": "none",
+  "completion_sent": false,
+  "started_at": "2026-10-31T02:03:28.187144+08:00",
+  "config": {
+    "ts": 0.02,
+    "horizon": 25,
+    "kp": 2.0,
+    "q_weight": 100.0,
+    "v_weight": 1.0,
+    "du_weight": 0.1,
+    "vmax": [
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02,
+      0.02
+    ],
+    "rate": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "scales": [
+      0.01,
+      -0.006,
+      0.008,
+      -0.006,
+      0.006,
+      -0.008
+    ],
+    "periods": [
+      8.0,
+      8.0,
+      4.0,
+      8.0,
+      4.0,
+      8.0
+    ],
+    "duration": 16.0,
+    "settle": 1.0,
+    "excursion": 0.035,
+    "joint_margin": 0.05,
+    "clearance": 0.003,
+    "feedback_timeout": 0.2,
+    "stall_timeout": 0.5,
+    "request_timeout": 0.3,
+    "stamp_tolerance": 0.15,
+    "heartbeat": 0.02,
+    "collision_period": 0.05,
+    "maximum_cycle": 0.1,
+    "maximum_wall": 100.0,
+    "solve_budget": 0.02,
+    "request_topic": "/p2/six_joint_velocity_request",
+    "status_topic": "/p2/six_guard_status",
+    "command_topic": "/forward_velocity_controller/commands",
+    "model": "q_next=q+Ts*u, six independent kinematic integrators; no torque dynamics or Cartesian obstacle constraints",
+    "limitations": "simulation only; sampled mesh clearance and floor checks, not continuous collision avoidance; no guard crash watchdog; emergency zero bypasses slew limit"
+  },
+  "source_sha256": "7261af713359a863cdc5049ee00b050e27aab41e75dcb9cd9ad8643bd8b342fc",
+  "core_sha256": "d19e0990a394f6fd926b7d9cd316c83980cb4146ea02e1e71eb4a53d9aff122e",
+  "dependencies": {
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "osqp": "1.0.4",
+    "trimesh": "4.5.3",
+    "python-fcl": "0.7.0.8"
+  },
+  "collision_policy": "latest-state overwrite mailbox in separate process; stale, failed or missing results stop motion; thresholds unchanged",
+  "gc_policy": "collect before node startup; cyclic GC disabled for bounded guard loop and restored at shutdown",
+  "maximum_spin_wall_s": 0.014067126030568033,
+  "maximum_loop_gap_wall_s": 0.024259978032205254,
+  "reference_check": {
+    "samples": 426,
+    "sample_step_sim_s": 0.04,
+    "elapsed_wall_s": 10.863782862958033,
+    "minimum_self_clearance_m": 0.017124216018839088,
+    "minimum_floor_clearance_m": 0.09859871715307236,
+    "note": "sampled nominal joint reference; excludes SRDF-disabled link pairs; not a swept-volume or tracking-tube guarantee"
+  },
+  "initial_q_rad": [
+    0.004723495622108409,
+    -1.5728339937362592,
+    0.01153602824053598,
+    -1.572833823459567,
+    0.008651942988688087,
+    -0.003778905287521649
+  ],
+  "stop_check": {
+    "verified": true,
+    "observed_sim_span_s": 0.20000000000004547,
+    "max_abs_velocity_rad_s": 1.5999992129811513e-12,
+    "samples": 98
+  },
+  "accepted_requests": 1171,
+  "motion_complete_received": true,
+  "max_actual_speed_rad_s": [
+    0.007866862474254981,
+    0.004720117484567283,
+    0.012646089997829743,
+    0.0047201174846840995,
+    0.009484567497900376,
+    0.006293489979418849
+  ],
+  "peak_excursion_rad": [
+    0.020015538108817843,
+    0.012009322865429217,
+    0.01604729112841234,
+    0.01200932286586931,
+    0.012035468345792626,
+    0.01601243048705041
+  ],
+  "final_offset_rad": [
+    -9.687119162382629e-12,
+    6.008304964666422e-12,
+    -2.9272511498090736e-11,
+    6.971534460831208e-12,
+    -2.404508536724137e-11,
+    7.749691079833587e-12
+  ],
+  "collision_checks": 527,
+  "collision_timing": {
+    "policy": "single overwrite mailbox; running check completes, next check uses latest snapshot",
+    "max_source_to_submit_wall_s": 0.011856230034027249,
+    "max_pending_wall_s": 0.026246963010635227,
+    "max_result_delivery_wall_s": 0.01847799599636346,
+    "max_result_age_wall_s": 0.08495950303040445,
+    "skipped_sequences": 0
+  },
+  "maximum_collision_compute_wall_s": 0.07598474901169538,
+  "minimum_self_clearance_m": 0.017124210139488533,
+  "minimum_floor_clearance_m": 0.09859871715307236,
+  "max_receive_gap_wall_s": 0.026659965980798006,
+  "finished_at": "2026-10-31T02:04:09.285503+08:00"
+}

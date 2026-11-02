@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "mode": "p",
+  "pilot_seconds": 0.0,
+  "reference_dir": "/home/carl/ROS2/arm/P3/data/runs/20261102_202248+0800_tracking_reference_c270af24",
+  "motion_command_requested": true,
+  "limits": [
+    "Simulation experiment, not an independent hardware safety system.",
+    "Watchdog and controller are separate processes, but joint failure can leave a latched command.",
+    "Collision supervision samples actual and constant-command lookahead states, not continuous collision avoidance.",
+    "MPC has no obstacle constraints; tracking error can invalidate nominal collision clearance.",
+    "No automatic controller switching, reset, execution retry or next run.",
+    "Zero command on stop bypasses slew limits; this is not an emergency-stop guarantee."
+  ],
+  "config": {
+    "config_version": "tracking_offline_v1",
+    "ts": 0.02,
+    "horizon": 25,
+    "kp": 2.0,
+    "q_weight": 100.0,
+    "v_weight": 1.0,
+    "du_weight": 0.1,
+    "vmax": 0.02,
+    "rate": 0.1,
+    "joint_margin": 0.05,
+    "settle_s": 2.0,
+    "solver_time_limit_s": 0.02,
+    "constraint_tolerance": 1e-05,
+    "scenarios": []
+  },
+  "reference_sha256": "02d49ec0c352e44328adaa6749c8a1d2969aadf62c9d71c1ecd0cd45df2e634d",
+  "initial_q_rad": [
+    -1.2931303974869117,
+    -0.8632637819617883,
+    1.0889283992092122,
+    -1.0861828025856128,
+    -1.4391394595171036,
+    -0.448828397933551
+  ],
+  "requested_tracking_sim_s": 191.57843348401732,
+  "tracking_completed": true,
+  "sampled_state_checks": 7144,
+  "unchanged_scene_checks": 438,
+  "solver_fallback_count": 0,
+  "deadline_fallback_count": 0,
+  "samples": 9563,
+  "error_rmse_rad": 4.2688871654609975e-06,
+  "max_abs_error_rad": 9.435426187498486e-05,
+  "compute_median_wall_s": 0.0002687739906832576,
+  "compute_max_wall_s": 0.007107227924279869,
+  "watchdog_result": {
+    "kind": "finished",
+    "stopped_confirmed": true,
+    "normal_stop": true,
+    "error": null
+  },
+  "stopped_confirmed": true,
+  "final_state_valid": true,
+  "final_scene_unchanged": true,
+  "final_controller_ok": true,
+  "endpoint_error_rad": [
+    2.0210826963407147e-07,
+    1.8314480820791346e-08,
+    1.372369948793306e-07,
+    2.1554671825185778e-07,
+    -9.322681959744727e-08,
+    -1.994362841539754e-09
+  ],
+  "endpoint_passed": true,
+  "finished_at": "2026-11-02T21:12:09.487602+08:00",
+  "next_motion_allowed": false
+}

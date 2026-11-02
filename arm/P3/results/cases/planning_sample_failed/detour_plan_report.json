@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-02T19:36:18.836400+08:00",
+  "case_dir": "/home/carl/ROS2/arm/P3/data/runs/20261101_224558+0800_detour_search_wELTEptP",
+  "config": {
+    "config_version": "detour_plan_v1",
+    "group": "ur_manipulator",
+    "pipeline_id": "move_group",
+    "planner_id": "RRTConnectkConfigDefault",
+    "planning_time_s": 5.0,
+    "planning_attempts": 1,
+    "velocity_scaling": 0.1,
+    "acceleration_scaling": 0.1,
+    "joint_goal_tolerance_rad": 0.0001,
+    "endpoint_tolerance_rad": 0.001,
+    "max_interpolation_step_rad": 0.01
+  },
+  "passed": false,
+  "stage": "detour_path_validity",
+  "execution_requested": false,
+  "limitations": [
+    "Virtual detour start is not the actual Gazebo state.",
+    "Preparation is planned separately and is not part of the detour task metrics.",
+    "Interpolation checks sample linear joint segments, not exact controller spline extrema or continuous collision.",
+    "Validity is limited to the current MoveIt scene/model; physical world equivalence was checked in the prior module.",
+    "Neither trajectory may be executed without renewed state/scene/controller checks."
+  ],
+  "scene_signature": "e321b3ea8fab810e9e82cb9095ab479d506800c065901c4380da6b4a5bf166f2",
+  "request_adapters": "default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints",
+  "captured_actual_start_rad": [
+    -1.4268607541545197,
+    -1.060112489623464,
+    0.9187465018851403,
+    -0.7685254758672074,
+    -1.413362282186605,
+    -0.24160271372837286
+  ],
+  "paths": {
+    "detour": {
+      "error_code": 1,
+      "planning_service_wall_s": 0.25431384006515145,
+      "interface_planning_time_s": 0.050303453,
+      "passed": false,
+      "point_count": 101,
+      "planned_duration_s": 9.92421769,
+      "path_length_rad": 3.2732448988806726,
+      "sample_count": 350,
+      "invalid_sample_count": 1,
+      "raw_sha256": "ba7832b2790639c3cd59ff5e59d597dcb9b353fb22b8dabc088895d39f2d6279"
+    }
+  },
+  "error": "RuntimeError: detour path has invalid sampled states; never execute",
+  "commit": "787eab1b411d10a4502f1f7db1d21702b02a0262",
+  "dirty_status": "?? arm/P3/\n?? \"cripts for analyzing and controlling arm joint movements\"\n?? \"using ROS2 actions, including feedback handling and error checking.\""
+}

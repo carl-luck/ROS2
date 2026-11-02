@@ -1,0 +1,34 @@
+{
+  "tf_roundtrip/tf_report.json": {
+    "source": "evidence/tf/20261101_152042+0800_stamped_transform_d0305591/tf_report.json",
+    "sha256": "582af6c05310cce32a3d846efff3dadf8876e01ba8402ec38b5c2f3ac6ee7196"
+  },
+  "tf_roundtrip/transforms_and_messages.json": {
+    "source": "evidence/tf/20261101_152042+0800_stamped_transform_d0305591/transforms_and_messages.json",
+    "sha256": "17012797d35f91a1b9197f903194c427f7e60146cf5536fd3b8f36ff058b72eb"
+  },
+  "negative_tests/failure_report.json": {
+    "source": "data/runs/20261101_235141+0800_failure_cases_19189559/failure_report.json",
+    "sha256": "1371cdba34db855f4e1d25d272b3b8e5c70d77817362d0e29ee676ea6530a5ed"
+  },
+  "negative_tests/failure_trials.csv": {
+    "source": "data/runs/20261101_235141+0800_failure_cases_19189559/failure_trials.csv",
+    "sha256": "4e54e486bb3b021c2118f670ee4d47f3881c741a98ea49be77673f25aa95f3df"
+  },
+  "moveit_cancel_failed/sequence_report.json": {
+    "source": "data/runs/20261102_000510+0800_detour_plan_61b3fb60/execution_inputs_20261102_000540+0800_d8419fde/cancel_test_20261102_000551+0800_ee112b19/sequence_report.json",
+    "sha256": "7e9e7094fbfa6b47056f02f8623626a19950085d6501d916786ca3cb31cb473b"
+  },
+  "controller_cancel_passed/sequence_report.json": {
+    "source": "data/runs/20261102_000510+0800_detour_plan_61b3fb60/execution_inputs_20261102_000540+0800_d8419fde/controller_cancel_test_20261102_115619+0800_3f253211/sequence_report.json",
+    "sha256": "497aaeacb33a4d8849b96fe8430ab0154e1e2c6f802719a9219de48cc1302afa"
+  },
+  "watchdog_failed/gazebo_tracking_report.json": {
+    "source": "data/runs/20261102_204758+0800_gazebo_tracking_p_b3bef7d3/gazebo_tracking_report.json",
+    "sha256": "459b910cf012e1d0cbc60dba6cedc31107067209ad524bef0eb3e1bb110802d2"
+  },
+  "planning_sample_failed/detour_plan_report.json": {
+    "source": "data/runs/20261102_193618+0800_detour_plan_e6a9348b/detour_plan_report.json",
+    "sha256": "90cd31643dedb2cf628863d398edff3b9471f84ac2277f972c6303ad348e429f"
+  }
+}

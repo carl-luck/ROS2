@@ -1,0 +1,35 @@
+{
+  "case": "request_crash",
+  "controller": "mpc",
+  "injection": "none",
+  "status": "passed",
+  "injection_observation": {
+    "elapsed_sim_s": 2.005999999999858,
+    "last_request": [
+      0.007862103622724005,
+      -0.004717262173770846,
+      -0.000670413357158188,
+      -0.0047172621752931115,
+      -0.000502810013268648,
+      -0.006289682898162222
+    ],
+    "crash_test": true
+  },
+  "injection_runner_monotonic_s": 387219.9423019,
+  "guard_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/request_crash/guard",
+  "tracking_directory": "/home/carl/ROS2/arm/P2/data/data_v4/20261031_020227_994815_six_joint_batch/request_crash/tracking",
+  "guard_status": "failed",
+  "guard_reason": "request_source_sim_stamp_stale",
+  "tracking_status": "running",
+  "stop_verified": true,
+  "actual_speed_max_rad_s": [
+    0.007865015739033802,
+    0.004719009443511323,
+    0.012634658565240257,
+    0.004719009443922773,
+    0.009475993923774798,
+    0.006292012591205409
+  ],
+  "last_request_to_first_stopping_zero_wall_s": 0.24615943903336301,
+  "timing_note": "guard receive to publication wall time; not exact kill-to-physical-stop latency"
+}

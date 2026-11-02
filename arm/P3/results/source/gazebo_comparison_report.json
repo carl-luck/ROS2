@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "motion_requested": false,
+  "runs": {
+    "p": {
+      "run_dir": "/home/carl/ROS2/arm/P3/data/runs/20261102_210430+0800_gazebo_tracking_p_ca08cebd",
+      "rmse_rad_at_logged_times": 4.2799251478060376e-06,
+      "time_weighted_rmse_rad": 4.257061366520477e-06,
+      "per_joint_rmse_rad": [
+        5.633288321028382e-06,
+        6.956711277627148e-07,
+        4.495022263840096e-06,
+        6.168968543461234e-06,
+        2.7181692443609545e-06,
+        3.4696999748502137e-06
+      ],
+      "max_abs_error_rad": 9.435426187498486e-05,
+      "endpoint_error_rad": [
+        2.0210826963407147e-07,
+        1.8314480820791346e-08,
+        1.372369948793306e-07,
+        2.1554671825185778e-07,
+        -9.322681959744727e-08,
+        -1.994362841539754e-09
+      ],
+      "compute_median_wall_s": 0.0002687739906832576,
+      "compute_p95_wall_s": 0.0009465952869504669,
+      "solver_fallback_count": 0,
+      "deadline_fallback_count": 0,
+      "stopped_confirmed": true
+    },
+    "mpc": {
+      "run_dir": "/home/carl/ROS2/arm/P3/data/runs/20261102_211826+0800_gazebo_tracking_mpc_022babee",
+      "rmse_rad_at_logged_times": 1.4241145869027165e-06,
+      "time_weighted_rmse_rad": 1.3370398650374354e-06,
+      "per_joint_rmse_rad": [
+        1.2376019196992518e-06,
+        1.9154264401634936e-06,
+        1.3229754910094082e-06,
+        2.1065641006768887e-06,
+        7.714671081584203e-07,
+        4.301851013351369e-07
+      ],
+      "max_abs_error_rad": 9.784412502811257e-05,
+      "endpoint_error_rad": [
+        5.134781488891349e-16,
+        2.4332202919197243e-11,
+        5.4090509848947477e-11,
+        5.373701483790683e-11,
+        -8.566036768797858e-12,
+        -2.1649348980190553e-15
+      ],
+      "compute_median_wall_s": 0.003244926978368312,
+      "compute_p95_wall_s": 0.006438046280527487,
+      "solver_fallback_count": 0,
+      "deadline_fallback_count": 3,
+      "stopped_confirmed": true
+    }
+  },
+  "limits": [
+    "One full run per controller is a development comparison, not a statistical reliability study.",
+    "Errors use measured feedback at logged control times; sample spacing may differ between runs.",
+    "No claim of real hardware accuracy or continuous collision safety."
+  ],
+  "reference_sha256": "02d49ec0c352e44328adaa6749c8a1d2969aadf62c9d71c1ecd0cd45df2e634d",
+  "initial_state_difference_rad": [
+    0.00015069805700318462,
+    7.96192760748049e-05,
+    0.00011591257519372178,
+    0.00011016549565723288,
+    -1.3597322167102632e-05,
+    -7.257038615543498e-05
+  ]
+}

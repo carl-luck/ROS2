@@ -1,0 +1,15 @@
+{
+  "config_version": "box_scene_v1",
+  "object_id": "p3_box_v1",
+  "gazebo_world": "empty",
+  "gazebo_robot_model": "ur",
+  "tf_world_frame": "world",
+  "planning_reference_frame": "world",
+  "robot_anchor_frame": "base_link",
+  "world_mapping": "identity_explicit_origin_installation",
+  "world_mapping_basis": "UR model placed at Gazebo world origin; URDF world-to-base_link fixed joint must be identity. Anchor queried at runtime. This is a configured simulation convention, not calibration.",
+  "box_full_size_m": [0.16, 0.16, 0.5],
+  "center_in_gazebo_world_m": [0.55, -0.45, 0.25],
+  "orientation_xyzw": [0.0, 0.0, 0.0, 1.0],
+  "static": true
+}

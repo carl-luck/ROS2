@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "robot_motion_requested": false,
+  "execution_ready": false,
+  "reference_dir": "/home/carl/ROS2/arm/P3/data/runs/20261102_202248+0800_tracking_reference_c270af24",
+  "runs": {
+    "ideal_p": {
+      "passed": true,
+      "checks": {
+        "finite_states": true,
+        "command_velocity_limit": true,
+        "command_rate_limit": true,
+        "joint_position_limits": true
+      },
+      "mode": "p",
+      "scenario": {
+        "name": "ideal",
+        "delay_steps": 0,
+        "velocity_tau_s": 0.0
+      },
+      "tracking_rmse_rad": 2.249863149391794e-06,
+      "full_run_rmse_rad": 2.246083683013597e-06,
+      "per_joint_tracking_rmse_rad": [
+        2.7146529018199043e-06,
+        3.215295665028467e-07,
+        2.413871293150125e-06,
+        3.792001749766276e-06,
+        1.6405161800219295e-06,
+        3.5189194557980625e-08
+      ],
+      "max_abs_error_rad": 8.677518216426705e-06,
+      "endpoint_after_settle_error_rad": [
+        1.2868314740177578e-07,
+        1.1636658969749192e-08,
+        8.732546197265378e-08,
+        1.3718595548439794e-07,
+        -5.934934188545071e-08,
+        -1.2698182505488376e-09
+      ],
+      "max_command_rad_s": 0.01800632797358742,
+      "max_command_rate_rad_s2": 0.0022546925762655145,
+      "max_observed_actual_velocity_rad_s": 0.01800632797358742,
+      "fallback_count": 0,
+      "compute_budget_overrun_count": 0,
+      "limited_command_count": 0,
+      "statuses": {
+        "baseline_no_solver": 9579
+      },
+      "compute_median_wall_s": 0.00022469391115009785,
+      "compute_p95_wall_s": 0.00032684899633750325,
+      "compute_max_wall_s": 0.0035434929886832833,
+      "log_sha256": "947499878ad519e45ebbd301016bfa507d76208e5f134cf1a8280f8986891883"
+    },
+    "ideal_mpc": {
+      "passed": true,
+      "checks": {
+        "finite_states": true,
+        "command_velocity_limit": true,
+        "command_rate_limit": true,
+        "joint_position_limits": true
+      },
+      "mode": "mpc",
+      "scenario": {
+        "name": "ideal",
+        "delay_steps": 0,
+        "velocity_tau_s": 0.0
+      },
+      "tracking_rmse_rad": 2.3626531763013353e-08,
+      "full_run_rmse_rad": 2.506479609298382e-08,
+      "per_joint_tracking_rmse_rad": [
+        3.5727827645360684e-08,
+        3.05197468711045e-09,
+        2.2914620691124974e-08,
+        3.599681077466403e-08,
+        1.55731777219234e-08,
+        3.342295932665471e-10
+      ],
+      "max_abs_error_rad": 7.647757036544078e-07,
+      "endpoint_after_settle_error_rad": [
+        -1.4710455076283324e-15,
+        -2.220446049250313e-16,
+        -1.1102230246251565e-15,
+        -1.5543122344752192e-15,
+        6.661338147750939e-16,
+        1.1102230246251565e-16
+      ],
+      "max_command_rad_s": 0.017999740562865005,
+      "max_command_rate_rad_s2": 0.002233131789803911,
+      "max_observed_actual_velocity_rad_s": 0.017999740562865005,
+      "fallback_count": 0,
+      "compute_budget_overrun_count": 1,
+      "limited_command_count": 0,
+      "statuses": {
+        "solved": 9579
+      },
+      "compute_median_wall_s": 0.0019809560617432,
+      "compute_p95_wall_s": 0.002399890229571611,
+      "compute_max_wall_s": 0.030024440959095955,
+      "log_sha256": "d84feae3f18553f9d51ee0de4a68bc0f95299547b571edae3a374cd2f5cf6e0b"
+    },
+    "lag_delay_p": {
+      "passed": true,
+      "checks": {
+        "finite_states": true,
+        "command_velocity_limit": true,
+        "command_rate_limit": true,
+        "joint_position_limits": true
+      },
+      "mode": "p",
+      "scenario": {
+        "name": "lag_delay",
+        "delay_steps": 1,
+        "velocity_tau_s": 0.08
+      },
+      "tracking_rmse_rad": 2.487768371456426e-05,
+      "full_run_rmse_rad": 2.484732360009451e-05,
+      "per_joint_tracking_rmse_rad": [
+        3.0103580168363397e-05,
+        3.5519925594419236e-06,
+        2.6666498518481207e-05,
+        4.1890963874081e-05,
+        1.812309496266091e-05,
+        3.8874587407515824e-07
+      ],
+      "max_abs_error_rad": 0.00010089826679049452,
+      "endpoint_after_settle_error_rad": [
+        4.5374400263475945e-07,
+        4.10315128540617e-08,
+        3.079144821338531e-07,
+        4.837253801959207e-07,
+        -2.0926911181717855e-07,
+        -4.477450687989659e-09
+      ],
+      "max_command_rad_s": 0.01809632650331329,
+      "max_command_rate_rad_s2": 0.002518110432997065,
+      "max_observed_actual_velocity_rad_s": 0.01808749980890891,
+      "fallback_count": 0,
+      "compute_budget_overrun_count": 0,
+      "limited_command_count": 0,
+      "statuses": {
+        "baseline_no_solver": 9579
+      },
+      "compute_median_wall_s": 0.0002230270765721798,
+      "compute_p95_wall_s": 0.00030417973175644875,
+      "compute_max_wall_s": 0.0036387890577316284,
+      "log_sha256": "45419ca203a945d31e2bd0dd62f9b0a64aa00df1f1cba04e138d85a6d97aa5e2"
+    },
+    "lag_delay_mpc": {
+      "passed": true,
+      "checks": {
+        "finite_states": true,
+        "command_velocity_limit": true,
+        "command_rate_limit": true,
+        "joint_position_limits": true
+      },
+      "mode": "mpc",
+      "scenario": {
+        "name": "lag_delay",
+        "delay_steps": 1,
+        "velocity_tau_s": 0.08
+      },
+      "tracking_rmse_rad": 5.165749587918789e-06,
+      "full_run_rmse_rad": 5.145407343804219e-06,
+      "per_joint_tracking_rmse_rad": [
+        6.310534516016647e-06,
+        7.352697966737096e-07,
+        5.520024355555398e-06,
+        8.671521948641767e-06,
+        3.7515207319979157e-06,
+        8.04716375487451e-08
+      ],
+      "max_abs_error_rad": 2.6168685527627744e-05,
+      "endpoint_after_settle_error_rad": [
+        2.8822710468334733e-09,
+        2.6064039815310025e-10,
+        1.9559331931873203e-09,
+        3.072718968155641e-09,
+        -1.3293182110629687e-09,
+        -2.8441582422544798e-11
+      ],
+      "max_command_rad_s": 0.018017695972858263,
+      "max_command_rate_rad_s2": 0.00252069910425519,
+      "max_observed_actual_velocity_rad_s": 0.018013777153559275,
+      "fallback_count": 0,
+      "compute_budget_overrun_count": 0,
+      "limited_command_count": 0,
+      "statuses": {
+        "solved": 9579
+      },
+      "compute_median_wall_s": 0.0019685309380292892,
+      "compute_p95_wall_s": 0.0022884778562001886,
+      "compute_max_wall_s": 0.006045420072041452,
+      "log_sha256": "f247df3275d1681931871b5c38a8210625392b8325933ddcf615249fd8b054b6"
+    }
+  },
+  "limits": [
+    "Offline synthetic plants only, not Gazebo or real hardware measurements.",
+    "Both controllers share reference, limits and plant; MPC predicts an ideal integrator even in lag_delay.",
+    "No obstacle constraints in MPC; no actual-state collision checks in offline plants.",
+    "Wall timings exclude ROS and supervision and do not prove real-time capability.",
+    "Compute budget overruns are recorded; this offline runner does not enforce a real-time scheduling deadline.",
+    "Passing checks does not require MPC to outperform P; fallback counts remain visible."
+  ],
+  "reference_sha256": "02d49ec0c352e44328adaa6749c8a1d2969aadf62c9d71c1ecd0cd45df2e634d",
+  "config": {
+    "config_version": "tracking_offline_v1",
+    "ts": 0.02,
+    "horizon": 25,
+    "kp": 2.0,
+    "q_weight": 100.0,
+    "v_weight": 1.0,
+    "du_weight": 0.1,
+    "vmax": 0.02,
+    "rate": 0.1,
+    "joint_margin": 0.05,
+    "settle_s": 2.0,
+    "solver_time_limit_s": 0.02,
+    "constraint_tolerance": 1e-05,
+    "scenarios": [
+      {
+        "name": "ideal",
+        "delay_steps": 0,
+        "velocity_tau_s": 0.0
+      },
+      {
+        "name": "lag_delay",
+        "delay_steps": 1,
+        "velocity_tau_s": 0.08
+      }
+    ]
+  },
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "versions": {
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "osqp": "1.0.4"
+  },
+  "duration_reference_sim_s": 189.57843348401732,
+  "sample_count_per_run": 9580,
+  "finished_at": "2026-11-02T20:29:39.849774+08:00"
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+**/build/
+**/install/
+**/log/
+data/
+evidence/
+media/*.mp4
+scripts/*.before_*.py
+docs/*.before_*.md
+*.zip
+release_candidates/
